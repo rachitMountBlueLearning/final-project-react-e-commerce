@@ -1,0 +1,57 @@
+:root {
+    --mainBlue: #000050;
+    --lightBlue: #0d6efd;
+    --mainWhite: #f3f3f3;
+    --mainDark: #232528;
+    --mainYellow: #ffa400;
+}
+
+/* reset CSS */
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body {
+    font-family: "Menlo", "Barlow", "Roboto", "Roboto Mono" !important;
+    background: var(--mainWhite) !important;
+    color: var(--mainDark) !important;
+    font-size: 1rem !important;
+    max-width: 100rem !important;
+}
+
+a, a:hover, a:visited {
+    text-decoration: none !important;
+    color: var(--mainWhite) !important;
+}
+
+.logo {
+    font-family: "Barlow", "Menlo", "Roboto", "Roboto Mono";
+    background: var(--mainDark);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+    padding: 0.5rem !important;
+    border-radius: 0.5rem;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    text-transform: uppercase;
+    max-width: 10rem !important;
+}
+
+.logo > .small {
+    font-size: 1.5rem;
+    color: var(--mainWhite);
+    line-height: 1.5rem;
+}
+
+.logo > .large {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.logo > .large > img {
+    display: relative;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin: -0.4rem 0.05rem 0rem 0.1rem !important;
+}

@@ -7,51 +7,39 @@
 }
 
 /* reset CSS */
-* {
-    margin: 0 !important;
-    padding: 0 !important;
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background-color: #5a5ae9;
 }
 
-body {
-    font-family: "Menlo", "Barlow", "Roboto", "Roboto Mono" !important;
-    background: var(--mainWhite) !important;
-    color: var(--mainDark) !important;
-    font-size: 1rem !important;
-    max-width: 100rem !important;
+.logo{
+    height: 60px;
 }
 
-a, a:hover, a:visited {
-    text-decoration: none !important;
-    color: var(--mainWhite) !important;
-}
-
-.logo {
-    font-family: "Barlow", "Menlo", "Roboto", "Roboto Mono";
-    background: var(--mainDark);
-    box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
-    padding: 0.5rem !important;
-    border-radius: 0.5rem;
+.title{
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    vertical-align: middle;
-    color: #fff;
-    text-transform: uppercase;
-    max-width: 10rem !important;
+    width: 30%;
+}
+.name{
+    height: 50px;
+    font-size:xx-large;
+    color: rgb(48, 21, 21);
+    margin-top: -15px;
 }
 
-.logo > .small {
-    font-size: 1.5rem;
-    color: var(--mainWhite);
-    line-height: 1.5rem;
+.ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: -20px;
+    list-style: none;
 }
 
-.logo > .large {
-    font-size: 2rem;
-    line-height: 2rem;
-}
-
-.logo > .large > img {
-    display: relative;
-    width: 1.8rem;
-    height: 1.8rem;
-    margin: -0.4rem 0.05rem 0rem 0.1rem !important;
+.ul li i{
+    margin-right:5px ;
 }

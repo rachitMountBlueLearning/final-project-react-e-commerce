@@ -5,18 +5,19 @@ import "../App.css";
 export default class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-sm bg-primary navbar-dark px-sm-5">
+      <nav className="navbar">
         <Link to="/">
-          <img src={logo} alt="store" className="navbar-brand" class="logo" />
+          <img src={logo} alt="store" className="logo"/>
         </Link>
-        <ul className="navbar-nav align-items-center">
-          <li className="nav-items ml-5">
-            <Link to="/" className="nav-link">
-              products
-            </Link>
-          </li>
+        <div class="title"><div class="name">Big Store Ecommerce</div>
+        <ul class="ul">
+        <li><i class="fas fa-house-user"></i>Home</li>
+        <li><i class="fas fa-sign-in-alt"></i>Login</li>
+        <li><i class="far fa-user"></i>Account</li>
+        <li><i class="fas fa-mobile-alt"></i>Contact</li>
         </ul>
-        <Link to="/cart" className="ml-auto">
+        </div>
+        <Link to="/cart">
           <button>
             <i className="fas fa-cart-plus"></i>
             my cart

@@ -14,7 +14,7 @@ export default class Header extends Component {
         </nav>
         <div className="header-buttons-section">
           <Link to="/cart" className="button-cart"><i className="fas fa-cart-plus"></i> My Cart</Link>
-          <button className="button-login-register"><i className="fas fa-sign-in-alt"></i>Login/Register</button>
+          <button className="button-login-register"><i className="fas fa-sign-in-alt"></i> Login/Register</button>
         </div>
       </section>
     );

@@ -10,6 +10,7 @@ export default class Product extends Component {
     };
     this.getItems = this.getItems.bind(this);
     this.getCategories = this.getCategories.bind(this);
+    this.getCategoryProducts = this.getCategoryProducts.bind(this);
   }
 
   getItems() {
@@ -32,6 +33,16 @@ export default class Product extends Component {
       });
   }
 
+  getCategoryProducts(category) {
+    fetch("https://fakestoreapi.com/products/category/" + category)
+      .then((res) => res.json())
+      .then((result) => {
+        this.setState({
+          items: result,
+        });
+      });
+  }
+
   componentDidMount() {
     this.getItems();
     this.getCategories();
@@ -44,21 +55,20 @@ export default class Product extends Component {
     return (
       <section className="products-section">
         <nav className="category-nav">
+          <button className="product-category" onClick={() => this.getItems()} key="All">All</button>
           {categories.map((category) => (
-            <button className="product-category" onClick={() => (items.filter((product) => product.category === category))} key={category}>{category}</button>
+            <button className="product-category" onClick={() => this.getCategoryProducts(category)} key={category}>{category}</button>
           ))}
         </nav>
-        <div className="products">
+        <div className="products-panel">
           {items.map((item) => (
-            <div key={item.id} className="container1">
+            <div key={item.id} className="product-card">
               <img
                 src={item.image}
                 alt="product"
-                width="200"
-                height="300"
               ></img>
-              <h6>{item.title}</h6>
-              <h4>{item.price}</h4>
+              <h3 className="product-title">{item.title}</h3>
+              <h3 className="product-price">&#8377;{item.price}</h3>
             </div>
           ))}
         </div>

@@ -7,24 +7,131 @@
 }
 
 /* reset CSS */
-.navbar{
+
+
+body {
+    font-family: Menlo, Barlow, Roboto, Roboto Mono;
+    color: #333
+}
+
+.header-section {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100px;
-    background-color: #5a5ae9;
+    height: 6rem;
+    background-color: #EFEFEF;
+    top: 0rem;
+    z-index: 10;
 }
 
-.logo{
-    height: 60px;
-}
-
-.title{
+.logo, .logo:hover{
+    font-family: Barlow, Menlo, Roboto, Roboto Mono;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    width: 30%;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background-color: #333;
+    text-decoration: none;
+    text-decoration: none;
 }
+
+.logo .large {
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #fff;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.logo .large img {
+    height: 1.7rem;
+    width: 1.7rem;
+    margin: 0rem 0rem -0.1rem 0.05rem;
+}
+
+.logo .small {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: #fff;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.navbar .header-nav-link {
+    margin: 0rem 1rem;
+}
+
+.navbar .header-nav-link i {
+    margin: 0.5rem;
+}
+
+.header-buttons-section {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.header-buttons-section i {
+    margin: 0rem 0.5rem;
+}
+
+.header-buttons-section .button-cart {
+    background-color: yellow;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 1px 1px 3px rgb(0 0 0 / 30%);
+    margin: 0rem 0.5rem;
+}
+
+.header-buttons-section .button-cart:hover {
+    box-shadow: 1px 1px 3px rgb(0 0 0 / 60%);
+}
+
+.header-buttons-section .button-login-register {
+    background-color: #2196F3;
+    color: #FFF;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 1px 1px 3px rgb(0 0 0 / 30%);
+    margin: 0rem 0.5rem;
+}
+
+.header-buttons-section .button-login-register:hover {
+    box-shadow: 1px 1px 3px rgb(0 0 0 / 60%);
+    cursor: pointer;
+}
+
+.products-section {
+    position: relative;
+    top: 6rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.products-section .category-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.products-section .category-nav .product-category {
+    margin: 0rem 0.5rem 1rem;
+    text-transform: capitalize;
+}
+
 .name{
     height: 50px;
     font-size:xx-large;

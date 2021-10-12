@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Title from "./Title";
 import "../App.css";
 
 export default class Product extends Component {
@@ -7,10 +6,13 @@ export default class Product extends Component {
     super(props);
     this.state = {
       items: [],
+      categories: []
     };
+    this.getItems = this.getItems.bind(this);
+    this.getCategories = this.getCategories.bind(this);
   }
 
-  componentDidMount() {
+  getItems() {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((result) => {
@@ -20,11 +22,32 @@ export default class Product extends Component {
       });
   }
 
+  getCategories() {
+    fetch("https://fakestoreapi.com/products/categories")
+      .then((res) => res.json())
+      .then((result) => {
+        this.setState({
+          categories: result,
+        });
+      });
+  }
+
+  componentDidMount() {
+    this.getItems();
+    this.getCategories();
+  }
+
+  
+
   render() {
-    const { items } = this.state;
+    let { items, categories } = this.state;
     return (
-      <div>
-        <Title name="Our" title="Products" />
+      <section className="products-section">
+        <nav className="category-nav">
+          {categories.map((category) => (
+            <button className="product-category" onClick={() => (items.filter((product) => product.category === category))} key={category}>{category}</button>
+          ))}
+        </nav>
         <div className="products">
           {items.map((item) => (
             <div key={item.id} className="container1">
@@ -39,7 +62,7 @@ export default class Product extends Component {
             </div>
           ))}
         </div>
-      </div>
+      </section>
     );
   }
 }

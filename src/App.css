@@ -212,3 +212,84 @@ body {
     flex-wrap: wrap;
 }
 
+
+
+/*---Footer CSS---*/
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #EFEFEF;
+    width: 100%;
+    margin-top: 130px;
+    height:200px;
+  }
+  .footer1 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 130px;
+    height:200px;
+    margin-top: 50px;
+    margin-left: 120px;
+  }
+  
+  .footer2{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    color: #f3f3f3;
+  }
+
+  .logo2{
+      margin-left: 20px;
+  }
+  .logoF {
+    width: 50px;
+    height: 50px;
+    margin-top: -30px;
+  }
+  
+  .social_media {
+    margin-left: -40px;
+  }
+  .social_media li {
+    display: inline-block;
+    margin-right: 10px;
+    color:grey;
+  }
+
+  .copyright{
+      margin-top: 15px;
+      margin-left: -100px;
+  }
+  
+  .ul-footer {
+    display: flex;
+    color: white;
+    margin-top: -20px;
+    margin-left: -20px;
+  }
+  .ul-footer li{
+      padding: 5px;
+  }
+  
+  .ul-2 {
+    list-style: none;
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .ul-2{
+      padding: 5px;
+  }
+  
+  .end_menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+    margin-right: 60px;
+  }
+  
+
+  
+  

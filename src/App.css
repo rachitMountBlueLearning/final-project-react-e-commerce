@@ -762,3 +762,19 @@
 		color: grey;
 	}
 }
+
+/*--- Login CSS--*/
+.login{
+	position: relative;
+	top: 6rem;
+}
+
+.signup{
+	position: relative;
+	top: 6rem;
+}
+
+.admin{
+	position: relative;
+	top: 6rem;
+}

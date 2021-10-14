@@ -22,7 +22,7 @@ export default class Header extends Component {
         </nav>
         <div className="header-buttons-section">
           <Link to="/cart" className="button-cart">
-            <i class="fas fa-shopping-cart"></i> My Cart
+            <i className="fas fa-shopping-cart"></i> My Cart
           </Link>
           <Link to="/signup">
             <button className="button-login-register">

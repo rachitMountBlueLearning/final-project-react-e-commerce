@@ -5,7 +5,7 @@ export default class ProductsList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			items: [],
+			products: [],
 			categories: []
 		};
 		this.getItems = this.getItems.bind(this);
@@ -18,7 +18,7 @@ export default class ProductsList extends Component {
 			.then((res) => res.json())
 			.then((result) => {
 				this.setState({
-					items: result,
+					products: result,
 				});
 			});
 	}
@@ -38,7 +38,7 @@ export default class ProductsList extends Component {
 			.then((res) => res.json())
 			.then((result) => {
 				this.setState({
-					items: result,
+					products: result,
 				});
 			});
 	}
@@ -50,7 +50,7 @@ export default class ProductsList extends Component {
 
 
 	render() {
-		let { items, categories } = this.state;
+		let { products: items, categories } = this.state;
 		return (
 			<section className="products-section">
 				<nav className="category-nav">

@@ -62,10 +62,7 @@ export default class ProductsList extends Component {
 				<div className="products-panel">
 					{items.map((item) => (
 						<div key={item.id} className="product-card">
-							<img
-								src={item.image}
-								alt="product"
-							></img>
+							<img src={item.image} alt="product" />
 							<h3 className="product-title">{item.title}</h3>
 							<h3 className="product-price">&#8377;{item.price}</h3>
 						</div>

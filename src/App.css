@@ -191,9 +191,10 @@
 	.products-section .products-panel .product-card img {
 		border-radius: 1rem;
 		border: 0.2rem solid #C9C9C9;
-		width: 100%;
+		width: 15rem;
 		height: 20rem;
 		margin-bottom: 0.5rem;
+		object-fit: contain;
 	}
 
 	.products-section .products-panel .product-card img:hover {
@@ -583,9 +584,10 @@
 	.products-section .products-panel .product-card img {
 		border-radius: 0.7rem;
 		border: 0.2rem solid #C9C9C9;
-		width: 100%;
+		width: 12rem;
 		height: 15rem;
 		margin-bottom: 0.5rem;
+		object-fit: contain;
 	}
 	
 	.products-section .products-panel .product-card h3 {

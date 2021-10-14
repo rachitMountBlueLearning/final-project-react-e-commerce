@@ -26,8 +26,8 @@ export default class Admin extends Component {
     return (
       <div className="admin">
         <h1>Welcome, You are logged In</h1>
-        <h2>Have a Nice day !</h2>
-        <Link to="/"><button onClick={this.handleLogout}>Logout</button></Link>
+        <h1>Have a Nice day !</h1>
+        <Link to="/"><button onClick={this.handleLogout} className="logoutButton">Logout</button></Link>
         <Link to="/">
           <h1>Go to home page</h1>
         </Link>

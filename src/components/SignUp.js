@@ -18,7 +18,7 @@ export default class SignUp extends Component {
       username: "",
       mobile: "",
       password: "",
-      LoggedIn
+      LoggedIn,
     };
     this.onChange = this.onChange.bind(this);
   }
@@ -34,8 +34,9 @@ export default class SignUp extends Component {
       return <Redirect to="/admin" />;
     }
     return (
-      <div className="signup">
-        <form>
+      <div>
+        <form className="signup">
+          <h1>SignUp</h1>
           <input
             type="text"
             placeholder="Firstname..."
@@ -80,7 +81,9 @@ export default class SignUp extends Component {
             <input type="submit"></input>
           </Link>
           <br />
-          <Link to="/login">Already a user? Click here to login</Link>
+          <Link to="/login">
+            <h1>Already a user? Click here to login</h1>
+          </Link>
         </form>
       </div>
     );

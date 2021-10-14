@@ -4,11 +4,11 @@ import { Redirect } from "react-router-dom";
 export default class Login extends Component {
   constructor(props) {
     super(props);
-    const token=localStorage.getItem("token")
-    console.log(token)
-    let LoggedIn=true;
-    if(token==null){
-        LoggedIn=false;
+    const token = localStorage.getItem("token");
+    console.log(token);
+    let LoggedIn = true;
+    if (token == null) {
+      LoggedIn = false;
     }
     this.state = {
       username: "",
@@ -29,8 +29,12 @@ export default class Login extends Component {
     e.preventDefault();
     const { username, password } = this.state;
     //login magic
-    if (username === "AB" && password === "AB") {
-      localStorage.setItem("token","asnc");
+    if (
+      (username === "amit" && password === "1234") ||
+      (username === "rachit" && password === "1234") ||
+      (username === "pyare" && password === "1234")
+    ) {
+      localStorage.setItem("token", "asnc");
       this.setState({
         LoggedIn: true,
       });
@@ -42,9 +46,9 @@ export default class Login extends Component {
       return <Redirect to="/admin" />;
     }
     return (
-      <div className="login">
-        <h1>Login</h1>
-        <form onSubmit={this.submitForm}>
+      <div>
+        <form onSubmit={this.submitForm} className="login">
+          <h1>Login</h1>
           <input
             type="text"
             placeholder="username"
@@ -52,7 +56,7 @@ export default class Login extends Component {
             value={this.state.username}
             onChange={this.onChange}
           ></input>
-          <br/>
+          <br />
           <input
             type="password"
             placeholder="password"
@@ -60,7 +64,7 @@ export default class Login extends Component {
             value={this.state.password}
             onChange={this.onChange}
           ></input>
-          <br/>
+          <br />
           <input type="submit"></input>
         </form>
       </div>

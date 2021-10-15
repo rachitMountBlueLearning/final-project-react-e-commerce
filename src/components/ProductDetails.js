@@ -24,20 +24,24 @@ export default class productDetails extends Component {
 		return (
 			<div className="product-details-page">
 				<h1>Product Details</h1>
-				<div>
+				<div class="product-detail">
 					<div>
 						<img
 							src={this.state.productDetails.image}
 							alt={this.state.productDetails.title}
+							className="product-detail-image"
 						/>
 					</div>
-					<div>
+					<div className="product-detail-description">
 						<h3>{this.state.productDetails.title}</h3>
-						<p> {this.state.productDetails.description} </p>
+						<h4> {this.state.productDetails.description} </h4>
 						<button type="submit"> Add to cart </button>
 						<Link to="/">
 							{" "}
-							<button type="submit"> Back </button>{" "}
+							<button type="submit" className="back-button">
+								{" "}
+								Back{" "}
+							</button>{" "}
 						</Link>
 					</div>
 				</div>

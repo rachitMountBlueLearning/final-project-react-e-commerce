@@ -1,13 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom';
-import reportWebVitals from './reportWebVitals';
-import { ProductProvider } from './context/ProductContext';
-import { UserProvider } from './context/UserContext';
-import { CartProvider } from './context/CartContext';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { BrowserRouter as Router } from "react-router-dom";
+import { ProductProvider } from "./context/ProductContext";
+import { UserProvider } from "./context/UserContext";
+import { CartProvider } from "./context/CartContext";
 
 ReactDOM.render(
 	<ProductProvider>
@@ -19,10 +17,5 @@ ReactDOM.render(
 			</UserProvider>
 		</CartProvider>
 	</ProductProvider>,
-	document.getElementById('root')
+	document.getElementById("root"),
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

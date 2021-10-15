@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
-import ProductsList from "./components/ProductsList";
+import AllProducts from "./components/ProductsList";
 import ProductDetails from "./components/ProductDetails";
 import Cart from "./components/Cart";
 import Default from "./components/Default";
@@ -18,8 +18,8 @@ class App extends Component {
       <React.Fragment>
         <Header />
         <Switch>
-          <Route exact path="/" component={ProductsList} />
-          <Route path="/details" component={ProductDetails} />
+          <Route exact path="/" component={AllProducts} />
+          <Route path="/productDetails/:id" component={ProductDetails} />
           <Route path="/cart" component={Cart} />
           <Route path="/contact" component={Contact} />
           <Route path="/signup" component={SignUp}/>

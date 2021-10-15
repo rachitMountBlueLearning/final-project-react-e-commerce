@@ -207,30 +207,6 @@
     overflow: hidden;
   }
 
-  .name {
-    height: 50px;
-    font-size: xx-large;
-    color: rgb(48, 21, 21);
-    margin-top: -15px;
-  }
-
-  .ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: -20px;
-    list-style: none;
-  }
-
-  .ul li i {
-    margin-right: 5px;
-  }
-
-  .products {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   /*---Footer CSS---*/
 
   .footer-section {

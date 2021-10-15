@@ -24,7 +24,7 @@ export default class AllProducts extends Component {
 
 	getAllProducts() {
 		this.setState({
-				displayProducts: this.state.productsList
+				productsDisplay: this.state.productsList
 			})
 	}
 

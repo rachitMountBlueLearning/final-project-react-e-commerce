@@ -187,6 +187,10 @@
     justify-content: space-between;
   }
 
+  .products-section .products-panel .product-card a, .products-section .products-panel .product-card a:visited, .products-section .products-panel .product-card a:hover {
+    text-decoration: none;
+  }
+
   .products-section .products-panel .product-card img {
     border-radius: 1rem;
     border: 0.2rem solid #c9c9c9;
@@ -223,6 +227,90 @@
   .rating i {
     color: #ffa400;
   }
+
+  /*--- Login CSS--*/
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 8rem;
+  height: 300px;
+  margin-left: 750px;
+  margin-right: 750px;
+  background-color: #efefef;
+}
+
+.login > input {
+  margin-top: 10px;
+  padding: 7px;
+  border-radius: 5px;
+  border-color: #000050;
+}
+
+.login > h1 {
+  font-size: large;
+  font-weight: 600;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 8rem;
+  height: 400px;
+  margin-left: 720px;
+  margin-right: 720px;
+  background-color: #efefef;
+}
+
+.signup > h1 {
+  font-size: large;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.signup > input {
+  margin-top: 10px;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 30px;
+  border-radius: 5px;
+  border-color: #000050;
+}
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 8rem;
+  height: 400px;
+}
+
+.admin > h1 {
+  margin-top: 30px;
+  font-size: large;
+  font-weight: 600;
+}
+
+.logoutButton {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  padding: 15px 32px;
+  transition-duration: 0.4s;
+  color: #232528;
+}
+
+.logoutButton:hover {
+  background-color: #333;
+  color: white;
+}
 
   /*--- ProductDetail Page CSS---*/
 
@@ -261,27 +349,29 @@
   .product-detail-description > button {
     width: 20%;
     margin-bottom: 20px;
-    padding: 7px;
+    padding: 1rem;
+    border: none;
     font-size: medium;
     border-radius: 5px;
   }
 
   .product-detail-description > button:hover {
     color: #fff;
-    background-color: rgb(165, 23, 146);
+    background-color: #333;
   }
   
    .back-button{
     width: 15%;
+    border: none;
     margin-bottom: 20px;
-    padding: 7px;
+    padding: 1rem;
     font-size: medium;
     border-radius: 5px;
    }
 
    .back-button:hover {
     color: #fff;
-    background-color: rgb(165, 23, 146);
+    background-color: #333;
   } 
   /*---Footer CSS---*/
 
@@ -441,6 +531,12 @@
     margin-top: 10px;
     color: grey;
   }
+}
+
+a, a:hover, a:visited {
+  text-decoration: none;
+  font-weight: normal;
+  color: #333
 }
 
 /* --- for Mobile Screen--- */
@@ -628,6 +724,10 @@
     align-content: center;
     margin: 1rem 0.7rem;
     justify-content: space-between;
+  }
+
+  .products-section .products-panel .product-card a, .products-section .products-panel .product-card a:visited, .products-section .products-panel .product-card a:hover {
+    text-decoration: none;
   }
 
   .products-section .products-panel .product-card img {
@@ -899,6 +999,6 @@
 }
 
 .logoutButton:hover {
-  background-color: #c02ca0;
+  background-color: #2427d1;
   color: white;
 }

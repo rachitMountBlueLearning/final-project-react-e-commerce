@@ -19,11 +19,10 @@ export default class Cart extends Component {
 			);
 		} else {
 			return (
-				<div className="cart">
-					<Link to="/" className="cross">
-						{" "}
-						X{" "}
-					</Link>
+				<div>
+					<div className="cross">
+						<Link to="/"> X </Link>
+					</div>
 					{this.props.cartDetails.map((Items) => (
 						<div className="cart-flex">
 							<div
@@ -33,16 +32,22 @@ export default class Cart extends Component {
 								<img
 									src={Items.productImage}
 									alt={Items.productTitle}
+									className="cart-image"
 								/>
 							</div>
-							<div className="product-title">
-								<h3>{Items.productTitle}</h3>
-								<br />
-								<h4>
-									Price: {Items.productPrice * Items.quantity}
-								</h4>
-								<br />
-								<h4>Quantity: {Items.quantity}</h4>
+							<div className="cart-discription">
+								<div>
+									<h5>{Items.productTitle}</h5>
+								</div>
+								<div>
+									<h5>
+										Price:{" "}
+										{Items.productPrice * Items.quantity}
+									</h5>
+								</div>
+								<div>
+									<h5>Quantity: {Items.quantity}</h5>
+								</div>
 							</div>
 						</div>
 					))}

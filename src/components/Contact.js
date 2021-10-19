@@ -40,22 +40,22 @@ export default class Contact extends Component {
 						</form>
 						<div className="branches">
 							<h2>Our Branches</h2>
-							<div class="address">
+							<div className="address">
 								<h3>
-									<i class="fas fa-map-marker-alt"></i> 756
-									Global Place, New York.
+									<i className="fas fa-map-marker-alt"></i>{" "}
+									756 Global Place, New York.
 								</h3>
 								<h3>
-									<i class="fas fa-map-marker-alt"></i> 889
-									diamond street, USA.
+									<i className="fas fa-map-marker-alt"></i>{" "}
+									889 diamond street, USA.
 								</h3>
 								<h3>
-									<i class="fas fa-map-marker-alt"></i> 756
-									Unitech buiding, Noida, India.
+									<i className="fas fa-map-marker-alt"></i>{" "}
+									756 Unitech buiding, Noida, India.
 								</h3>
 								<h3>
-									<i class="fas fa-map-marker-alt"></i> 889
-									Electric substation, Bangalore,India.
+									<i className="fas fa-map-marker-alt"></i>{" "}
+									889 Electric substation, Bangalore,India.
 								</h3>
 							</div>
 						</div>

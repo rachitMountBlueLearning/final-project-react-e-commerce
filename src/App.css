@@ -282,6 +282,13 @@
   border-color: #000050;
 }
 
+.submit:hover{
+  background-color: black;
+  color: white;
+  height: 2rem;
+  border-radius: 5px;
+}
+
 .admin {
   display: flex;
   flex-direction: column;
@@ -361,7 +368,7 @@
   }
   
    .back-button{
-    width: 15%;
+    width: 25%;
     border: none;
     margin-bottom: 20px;
     padding: 1rem;
@@ -1001,4 +1008,76 @@ a, a:hover, a:visited {
 .logoutButton:hover {
   background-color: #2427d1;
   color: white;
+}
+
+/* cart component */
+
+.cart{
+  position: relative;
+  top: 7rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.btn-red {
+  font-size: 1rem;
+  font-weight: bold;
+  width: 2rem;
+  background-color: red;
+  margin-right: 0.5rem;
+  border: transparent;
+  border-radius: 5px;
+}
+
+.btn-yellow {
+  width: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: yellow;
+  margin-left: 0.5rem;
+  border: transparent;
+  border-radius: 5px;
+}
+.quantity {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  border: transparent;
+  border-radius: 5px;
+}
+
+.cart-flex {
+  position: relative;
+  top: 7rem;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+}
+
+.product-image {
+  size: 30px
+}
+
+.product-title {
+  size: 1rem;
+}
+/* Loading */
+
+.loader {
+  position: relative;
+  top: 8rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  
 }

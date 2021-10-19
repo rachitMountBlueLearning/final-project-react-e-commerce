@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ProductCard from "./ProductCard";
+import LoadingStatus from "./LoadingStatus";
 
 export default class AllProducts extends Component {
 	constructor(props) {
@@ -8,6 +9,7 @@ export default class AllProducts extends Component {
 			productsList: [],
 			categories: [],
 			productsDisplay: [],
+			isLoading: true,
 		};
 
 		this.getAllProducts = this.getAllProducts.bind(this);
@@ -36,9 +38,13 @@ export default class AllProducts extends Component {
 				this.setState({
 					productsList: result,
 					productsDisplay: result,
+					isLoading: false,
 				}),
 			)
 			.catch((error) => {
+				this.setState({
+					isLoading: false,
+				});
 				console.log(error);
 			});
 
@@ -47,15 +53,21 @@ export default class AllProducts extends Component {
 			.then((result) =>
 				this.setState({
 					categories: result,
+					isLoading: false,
 				}),
 			)
 			.catch((error) => {
+				this.setState({
+					isLoading: false,
+				});
 				console.log(error);
 			});
 	}
 
 	render() {
-		return (
+		return this.state.isLoading ? (
+			<LoadingStatus />
+		) : (
 			<section className="products-section">
 				<nav className="category-nav">
 					<button

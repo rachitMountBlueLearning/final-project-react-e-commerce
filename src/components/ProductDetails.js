@@ -42,6 +42,7 @@ export default class ProductDetails extends Component {
 		let inCartDetails = {
 			productImage: this.state.productDetails.image,
 			productTitle: this.state.productDetails.title,
+			productPrice: this.state.productDetails.price,
 			productId: parseInt(this.props.match.params.id),
 			quantity: 1,
 		};

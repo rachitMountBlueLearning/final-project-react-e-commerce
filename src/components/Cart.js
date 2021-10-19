@@ -21,7 +21,10 @@ export default class Cart extends Component {
 			return (
 				<div>
 					<div className="cross">
-						<Link to="/"> X </Link>
+						<Link to="/">
+							{" "}
+							<button type="button"> Home </button>{" "}
+						</Link>
 					</div>
 					{this.props.cartDetails.map((Items) => (
 						<div className="cart-flex">
@@ -41,7 +44,7 @@ export default class Cart extends Component {
 								</div>
 								<div>
 									<h5>
-										Price:{" "}
+										Price: &#8377;
 										{Items.productPrice * Items.quantity}
 									</h5>
 								</div>

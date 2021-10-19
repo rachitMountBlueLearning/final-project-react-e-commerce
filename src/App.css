@@ -1060,7 +1060,7 @@ a, a:hover, a:visited {
   justify-content: space-around;
   margin-top: 9rem;
   height: 40px;
-  width: 90%;
+  width: 70%;
   text-align: center;
 }
 /* Loading */
@@ -1079,21 +1079,26 @@ a, a:hover, a:visited {
 
 /*---Add to cart CSS---*/
 .cross{
-  margin-top: 8rem;
-  text-align: center;
+  float: right;
+  /* margin-top: 8rem; */
+  /* text-align: right; */
+  margin-right: 1rem;
+  border-radius: 5px;
 }
 
 
 .cart-image{
-  width: 300%;
+  /* width: 300%; */
   height: 300%;
+  margin-left: 500px;
 }
 
 .cart-discription{
   display: flex;
   flex-direction: column;
+  margin-left: 200px;
 }
 
 .cart-discription > div{
-  margin-top: 20px;
+  margin-top: -20px;
 }

@@ -1058,11 +1058,43 @@ a, a:hover, a:visited {
 .cart-flex {
   display: flex;
   justify-content: space-around;
+  flex-direction: row;
   margin-top: 9rem;
   height: 40px;
-  width: 70%;
+  width: 100%;
+}
+
+.product-image {
+ width: 50%;
+ height: 100%;
+}
+.cart-image{
+  height: 300%;
+  padding-left: 50%;
+}
+
+.cart-discription{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+
+  /* margin-left: 200px; */
+}
+
+.cart-discription > div{
+  margin-top: -10px;
+}
+
+.total-amount{
+  margin-top: 10%;
   text-align: center;
 }
+
+.product {
+  margin-top: 4%;
+}
+
 /* Loading */
 
 .loader {
@@ -1072,33 +1104,4 @@ a, a:hover, a:visited {
   font-size: 2rem;
   font-weight: bold;
   
-}
-
-
-
-
-/*---Add to cart CSS---*/
-.cross{
-  float: right;
-  /* margin-top: 8rem; */
-  /* text-align: right; */
-  margin-right: 1rem;
-  border-radius: 5px;
-}
-
-
-.cart-image{
-  /* width: 300%; */
-  height: 300%;
-  margin-left: 500px;
-}
-
-.cart-discription{
-  display: flex;
-  flex-direction: column;
-  margin-left: 200px;
-}
-
-.cart-discription > div{
-  margin-top: -20px;
 }

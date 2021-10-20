@@ -17,36 +17,44 @@ class App extends Component {
 		super(props);
 		this.state = {
 			cartDetails: [],
+			totalAmount: 0,
 		};
 	}
 	addItemToCart = (newItem) => {
 		let products = this.state.cartDetails;
 		products.push(newItem);
-
+		let totalPrice = this.state.totalAmount;
+		totalPrice += newItem.productPrice * newItem.quantity;
+		// totalPrice = Number.parseFloat(totalPrice).toFixed(2);
 		this.setState({
 			cartDetails: products,
+			totalAmount: totalPrice,
 		});
-		console.log(this.state.cartDetails);
 	};
 
 	increaseItem = (id) => {
 		let products = this.state.cartDetails;
+		let totalPrice = this.state.totalAmount;
 		if (products.some((cartItem) => parseInt(cartItem.productId) === id)) {
 			products = products.map((cartItem) => {
 				if (cartItem.productId === Number(id)) {
 					cartItem.quantity += 1;
+					totalPrice += cartItem.productPrice;
 				}
 				return cartItem;
 			});
+			// console.log(Number.parseFloat(439.34567115).toFixed(2));
 		}
+		// totalPrice = Number.parseFloat(totalPrice).toFixed(2);
 		this.setState({
 			cartDetails: products,
+			totalAmount: totalPrice,
 		});
 	};
 
 	decreaseItem = (id) => {
 		let products = this.state.cartDetails;
-
+		let totalPrice = this.state.totalAmount;
 		let currentProduct = products.find(
 			(product) => product.productId === Number(id),
 		);
@@ -54,16 +62,24 @@ class App extends Component {
 			products = products.map((cartItem) => {
 				if (cartItem.productId === Number(id)) {
 					cartItem.quantity -= 1;
+					totalPrice -= cartItem.productPrice;
 				}
 				return cartItem;
 			});
 		} else {
-			products = products.filter(
-				(product) => product.productId !== Number(id),
-			);
+			products = products.filter((product) => {
+				if (product.productId !== Number(id)) {
+					return true;
+				} else {
+					totalPrice -= product.productPrice;
+					return false;
+				}
+			});
 		}
+		// totalPrice = Number.parseFloat(totalPrice).toFixed(2);
 		this.setState({
 			cartDetails: products,
+			totalAmount: totalPrice,
 		});
 	};
 
@@ -78,6 +94,7 @@ class App extends Component {
 						render={(props) => (
 							<ProductDetails
 								{...props}
+								totalAmount={this.state.totalAmount}
 								productsInCart={this.state.cartDetails}
 								addToCart={this.addItemToCart}
 								increaseItem={this.increaseItem}
@@ -89,8 +106,8 @@ class App extends Component {
 						path="/cart"
 						render={(props) => (
 							<Cart
+								totalAmount={this.state.totalAmount}
 								cartDetails={this.state.cartDetails}
-								// cartCount={this.state.cartCount}
 								increaseItem={this.increaseItem}
 								decreaseItem={this.decreaseItem}
 							/>

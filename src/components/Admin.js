@@ -5,7 +5,6 @@ export default class Admin extends Component {
 	constructor(props) {
 		super(props);
 		const token = localStorage.getItem("token");
-		console.log(token);
 		let loggedIn = true;
 		if (token == null) {
 			loggedIn = false;

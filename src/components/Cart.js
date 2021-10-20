@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-// import ProductCounter from "./ProductCounter";
+import ProductCounter from "./ProductCounter";
 
 export default class Cart extends Component {
 	constructor(props) {
 		super(props);
-		console.log(props);
+		console.log(this.props.cartDetails);
 		this.state = {
 			isLoading: true,
 		};
@@ -20,12 +20,6 @@ export default class Cart extends Component {
 		} else {
 			return (
 				<div>
-					<div className="cross">
-						<Link to="/">
-							{" "}
-							<button type="button"> Home </button>{" "}
-						</Link>
-					</div>
 					{this.props.cartDetails.map((Items) => (
 						<div className="cart-flex">
 							<div
@@ -45,15 +39,29 @@ export default class Cart extends Component {
 								<div>
 									<h5>
 										Price: &#8377;
-										{Items.productPrice * Items.quantity}
+										{Number.parseFloat(
+											Items.productPrice * Items.quantity,
+										).toFixed(2)}
 									</h5>
 								</div>
-								<div>
-									<h5>Quantity: {Items.quantity}</h5>
+								<div className="prduct">
+									<ProductCounter
+										key={Items.productId}
+										product={Items}
+										increaseItem={this.props.increaseItem}
+										decreaseItem={this.props.decreaseItem}
+									/>
 								</div>
 							</div>
 						</div>
 					))}
+					<h3 className="total-amount">
+						{" "}
+						Total Amount: &#8377;{" "}
+						{Number.parseFloat(this.props.totalAmount).toFixed(
+							2,
+						)}{" "}
+					</h3>
 				</div>
 			);
 		}

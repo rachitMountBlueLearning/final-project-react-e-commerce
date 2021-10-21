@@ -1031,7 +1031,7 @@ a, a:hover, a:visited {
   font-size: 1rem;
   font-weight: bold;
   width: 2rem;
-  background-color: red;
+  background-color: rgb(243, 161, 161);
   margin-right: 0.5rem;
   border: transparent;
   border-radius: 5px;
@@ -1041,7 +1041,7 @@ a, a:hover, a:visited {
   width: 2rem;
   font-size: 1rem;
   font-weight: bold;
-  background-color: yellow;
+  background-color: rgb(243, 241, 139);
   margin-left: 0.5rem;
   border: transparent;
   border-radius: 5px;
@@ -1053,6 +1053,22 @@ a, a:hover, a:visited {
   margin-left: 0.5rem;
   border: transparent;
   border-radius: 5px;
+}
+
+.btn-red:hover {
+  background-color: red;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 1.5rem;
+  box-shadow: 0 0 0.5rem rgb(136, 134, 134)
+}
+
+.btn-yellow:hover {
+  background-color: yellow;
+  height: 2.2rem;
+  width: 2.2rem;
+  font-size: 1.5rem;
+  box-shadow: 0 0 0.5rem rgb(88, 87, 87)
 }
 
 .cart-flex {
@@ -1092,16 +1108,16 @@ a, a:hover, a:visited {
 }
 
 .product {
-  margin-top: 4%;
+  margin-top: 10%;
 }
 
 /* Loading */
 
 .loader {
   position: relative;
-  top: 8rem;
+  top: 18rem;
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  
+  margin-bottom: 25rem;
 }

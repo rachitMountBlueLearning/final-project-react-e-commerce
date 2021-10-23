@@ -50,6 +50,7 @@ export default class Cart extends Component {
 										product={Items}
 										increaseItem={this.props.increaseItem}
 										decreaseItem={this.props.decreaseItem}
+										removeItem={this.props.removeItem}
 									/>
 								</div>
 							</div>

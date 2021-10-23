@@ -1042,6 +1042,7 @@ a, a:hover, a:visited {
   font-size: 1rem;
   font-weight: bold;
   background-color: rgb(243, 241, 139);
+  margin-right: 0.5rem;
   margin-left: 0.5rem;
   border: transparent;
   border-radius: 5px;
@@ -1053,6 +1054,18 @@ a, a:hover, a:visited {
   margin-left: 0.5rem;
   border: transparent;
   border-radius: 5px;
+}
+
+.btn-gray {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  border: transparent;
+  border-radius: 5px;
+}
+
+.btn-gray:hover {
+  background-color: red;
+  box-shadow: 0 0 0.5rem rgb(136, 134, 134)
 }
 
 .btn-red:hover {

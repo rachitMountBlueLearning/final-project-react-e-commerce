@@ -7,6 +7,9 @@ function ProductCounter(props) {
 	const decreaseItem = () => {
 		props.decreaseItem(props.product.productId);
 	};
+	const removeItem = () => {
+		props.removeItem(props.product.productId);
+	};
 	return (
 		<div>
 			<div className="btn-group">
@@ -26,6 +29,9 @@ function ProductCounter(props) {
 					onClick={increaseItem}
 				>
 					+
+				</button>
+				<button type="button" className="btn-gray" onClick={removeItem}>
+					Remove From Cart
 				</button>
 			</div>
 		</div>

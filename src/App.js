@@ -83,6 +83,23 @@ class App extends Component {
 		});
 	};
 
+	removeItem = (id) => {
+		let products = this.state.cartDetails;
+		let totalPrice = this.state.totalAmount;
+		products = products.filter((product) => {
+			if (product.productId !== Number(id)) {
+				return true;
+			} else {
+				totalPrice -= product.productPrice * product.quantity;
+				return false;
+			}
+		});
+		this.setState({
+			cartDetails: products,
+			totalAmount: totalPrice,
+		});
+	};
+
 	render() {
 		return (
 			<React.Fragment>
@@ -99,6 +116,7 @@ class App extends Component {
 								addToCart={this.addItemToCart}
 								increaseItem={this.increaseItem}
 								decreaseItem={this.decreaseItem}
+								removeItem={this.removeItem}
 							/>
 						)}
 					/>
@@ -110,6 +128,7 @@ class App extends Component {
 								cartDetails={this.state.cartDetails}
 								increaseItem={this.increaseItem}
 								decreaseItem={this.decreaseItem}
+								removeItem={this.removeItem}
 							/>
 						)}
 					/>

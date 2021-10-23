@@ -78,6 +78,7 @@ export default class ProductDetails extends Component {
 								product={this.checkInCart()}
 								increaseItem={this.props.increaseItem}
 								decreaseItem={this.props.decreaseItem}
+								removeItem={this.props.removeItem}
 							/>
 						) : (
 							<button

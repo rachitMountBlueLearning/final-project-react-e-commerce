@@ -58,6 +58,7 @@ class App extends Component {
 		let currentProduct = products.find(
 			(product) => product.productId === Number(id),
 		);
+
 		if (currentProduct.quantity > 1) {
 			products = products.map((cartItem) => {
 				if (cartItem.productId === Number(id)) {
